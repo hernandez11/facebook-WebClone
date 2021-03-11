@@ -10,8 +10,8 @@ import firebase from 'firebase';
 
 function MessageSender() {
     const [{ user }, dispatch] = useStateValue();
-    const [input, setInput] = useState('');
-    const [imageUrl, setImageUrl] = useState('');
+    const [ input, setInput ] = useState('');
+    const [ setImageUrl ] = useState('');
 
 const firstName = user.displayName.split(' ').slice(0,-1);
 
@@ -22,8 +22,7 @@ const handleSubmit = e => {
         message: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         profilPic: user.photoURL,
-        username: user.displayName,
-        image: imageUrl
+        username: user.displayName
         })
         setInput('');
         setImageUrl('');
