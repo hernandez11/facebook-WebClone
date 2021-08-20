@@ -5,7 +5,7 @@ function Widgets( ) {
     return (
         <div className="widgets">
             <iframe
-                src="https://hulu.com"
+                src="https://about.fb.com/news/"
                 width="340"
                 height="100%"
                 style={{border: "none", overflow: "hidden"}}
